@@ -1,11 +1,10 @@
 
-import os
 from scratchclient import ScratchSession as s
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
-scratch = s('viewbot4repl2', os.environ['password']) #please don't hack. this is for everyone.
+scratch = s('viewbot4repl2', 'securePassword1') #please don't hack. this is for everyone.
 
 @app.route('/')
 def home():
